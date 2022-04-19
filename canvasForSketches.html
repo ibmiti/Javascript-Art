@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <canvas width="600" height="600"></canvas>
+
+        <script>
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            context.fillStyle = '#fac080';
+            context.fillRect(100, 100, 400, 400);
+            
+            // Instruction Set 1
+            context.lineWidth = 4;
+            context.beginPath();
+            context.rect(100, 100, 400, 400);
+            context.stroke();
+
+            // Instruction Set 2 -> Drawing a circle
+            context.beginPath();
+            context.arc(300, 300, 100, 0, Math.PI * 2);
+            context.stroke();
+
+ 
+
+        </script>
+    </body>
+</html>
