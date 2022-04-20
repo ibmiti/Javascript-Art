@@ -3,10 +3,10 @@
     <!-- We will draw on this -->
     <canvas width="600" height="600"></canvas>
 <script>
-    let canvas = document.querySelector('canvas');
-    let context = canvas.getContext('2d');
+    let canvas = document.querySelector( 'canvas' );
+    let context = canvas.getContext( '2d' );
 
-    // Darkens the lines
+    // Darkens the lines & give it color.
     context.lineWidth = 4;
     context.fillStyle = '#fac080';
     context.fillRect(100, 100, 400, 400);
@@ -17,9 +17,9 @@
     const gap = 20;
     let x,y;
 
-    // Creats multiple rows of Squares.
-    for (let i = 0; i < 5; i++){
-        for (let j = 0; j < 5; j++) {
+    // Creates multiple rows of Squares.
+    for ( let i = 0; i < 5; i++ ){
+        for ( let j = 0; j < 5; j++ ) {
             // Build Squares width wise. ( along the x )
             x = 100 + ( width + gap ) * i; 
             // Build the Squares Height/Y - wise.
@@ -27,14 +27,14 @@
 
             // Start Drawing.
             context.beginPath();
-            context.rect(x, y, width, height);
+            context.rect( x, y, width, height );
             context.stroke(); // Completes Drawing.
 
-            // Removes some squares 
+            // Removes some squares, every reload draws new squares.
             if (Math.random() > 0.5) { 
                 // Second Shape ( Begin second Sketch ).
                 context.beginPath();
-                context.rect(x + 8, y + 8, width - 16, height - 16 );
+                context.rect( x + 8, y + 8, width - 16, height - 16 );
                 context.stroke(); 
             } 
         }
